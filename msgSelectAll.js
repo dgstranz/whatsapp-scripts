@@ -22,6 +22,16 @@
 		document.getElementsByClassName('btn-default')[0].click();
 	}
 
+	function hideSystemMessages() {
+		var systemMessages = document.getElementsByClassName('message-system');
+		var length = systemMessages.length;
+		while (length) {
+			var element = systemMessages[0].parentNode;
+			element.parentNode.removeChild(element);
+		}
+		return length;
+	}
+
 	scrollToTop();
 	displayCheckboxes();
 	length = checkBoxes();
